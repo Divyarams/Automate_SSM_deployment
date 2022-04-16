@@ -8,7 +8,7 @@ ssm = boto3.client('ssm')
 def parameter_add():
     try:
         res = ssm.put_parameter(
-            Name = '/divyaproject/db2/{}'.format(df['Name'].loc[0]),
+            Name = '/awsproject/db2/{}'.format(df['Name'].loc[0]),
             Value = df['value'][0],
             Type = df['type'][0],
             Overwrite = False
